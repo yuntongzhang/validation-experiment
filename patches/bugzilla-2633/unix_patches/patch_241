@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-14 15:19:49.092316412 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-14 15:20:27.139443674 +0000
+@@ -245,7 +245,7 @@
+ 	double leftmargin = 0;
+ 	double pageWidth = 0;
+ 	double pageHeight = 0;
+-	uint32 diroff = 0;
++	uint32 diroff=(c>1048576);
+ #if !HAVE_DECL_OPTARG
+ 	extern char *optarg;
+ 	extern int optind;

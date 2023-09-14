@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-14 15:19:30.628739848 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-14 15:21:01.926645510 +0000
+@@ -1098,7 +1098,7 @@
+   start = (k - 1) * (file_size / n);
+   end = (k == n) ? file_size : k * (file_size / n);
+ 
+-  int __fuzzfix99 = initial_read != SIZE_MAX || start < initial_read;
++  int __fuzzfix99=((initial_read>256)&&((start-start)<initial_read));
+   if (__fuzzfix99)
+     {
+       memmove (buf, buf + start, initial_read - start);

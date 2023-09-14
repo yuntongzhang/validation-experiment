@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-14 15:19:34.760645093 +0000
++++ /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-14 15:21:12.354406218 +0000
+@@ -785,7 +785,7 @@
+ 
+   while (true)
+     {
+-      k = *p++;			/* Block descriptor word */
++      k=(*p);
+       int __fuzzfix22 = !k;
+       if (__fuzzfix22)
+         {			/* Loop back to the beginning */

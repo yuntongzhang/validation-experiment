@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-14 15:20:14.543732625 +0000
++++ /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-14 15:21:17.790281472 +0000
+@@ -178,7 +178,7 @@
+   struct prime *prime_list;
+   unsigned nprimes;
+ 
+-  int __fuzzfix7 = (argc != 2);
++  int __fuzzfix7=(argc!=(argc-2));
+   if (__fuzzfix7) {
+     fprintf(stderr,
+             "Usage: %s LIMIT\n"

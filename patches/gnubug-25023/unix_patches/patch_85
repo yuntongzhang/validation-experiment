@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-14 15:19:16.609061330 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-14 15:20:55.506792823 +0000
+@@ -1082,7 +1082,7 @@
+   if (__fuzzfix11)
+     first_page_number = 1;
+ 
+-  int __fuzzfix12 = parallel_files && explicit_columns;
++  int __fuzzfix12=((n_alloc==0)||(parallel_files&&explicit_columns));
+   if (__fuzzfix12)
+     die (EXIT_FAILURE, 0,
+          _("cannot specify number of columns when printing in parallel"));

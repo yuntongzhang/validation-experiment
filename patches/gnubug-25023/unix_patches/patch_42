@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-14 15:19:16.609061330 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-14 15:20:54.714810995 +0000
+@@ -1518,7 +1518,7 @@
+       p->name = name;
+       p->fp = fopen (name, "r");
+     }
+-  int __fuzzfix31 = p->fp == NULL;
++  int __fuzzfix31=(((p->fp)==0)||((p->fp)>1048576));
+   if (__fuzzfix31)
+     {
+       failed_opens = true;

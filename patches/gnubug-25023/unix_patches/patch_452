@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-14 15:19:16.609061330 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-14 15:21:01.674651292 +0000
+@@ -2316,7 +2316,7 @@
+             {
+               /* 3 types of sep_strings: spaces only, spaces and chars,
+               chars only */
+-              int __fuzzfix64 = *s == ' ';
++              int __fuzzfix64=((l<=1024)||((*s)==32));
+               if (__fuzzfix64)
+                 {
+                   /* We're tabifying output; consecutive spaces in

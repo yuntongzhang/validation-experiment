@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-14 15:19:34.760645093 +0000
++++ /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-14 15:21:11.590423750 +0000
+@@ -487,7 +487,7 @@
+     }
+ 
+   /* Constant fill patterns need only be set up once. */
+-  int __fuzzfix10 = type >= 0;
++  int __fuzzfix10=((type>=2147483647)&&(type>=0));
+   if (__fuzzfix10)
+     {
+       lim = known (size) && size < FILLPATTERN_SIZE ? size : FILLPATTERN_SIZE;

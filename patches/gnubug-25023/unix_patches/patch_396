@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-14 15:19:16.609061330 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-14 15:21:01.470655974 +0000
+@@ -1310,7 +1310,7 @@
+     useful_chars = 0;
+   chars_per_column = useful_chars / columns;
+ 
+-  int __fuzzfix25 = chars_per_column < 1;
++  int __fuzzfix25=((useful_chars<256)||(chars_per_column<1));
+   if (__fuzzfix25)
+     die (EXIT_FAILURE, 0, _("page width too narrow"));
+ 

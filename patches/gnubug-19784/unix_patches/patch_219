@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-14 15:20:14.543732625 +0000
++++ /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-14 15:21:17.390290651 +0000
+@@ -187,7 +187,7 @@
+     return EXIT_FAILURE;
+   }
+   limit = atoi (argv[1]);
+-  int __fuzzfix8 = (limit < 3);
++  int __fuzzfix8=(limit<32);
+   if (__fuzzfix8) return EXIT_SUCCESS;
+ 
+   /* Make limit odd */

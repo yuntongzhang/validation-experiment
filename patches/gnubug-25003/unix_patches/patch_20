@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-14 15:19:30.628739848 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-14 15:21:01.150663316 +0000
+@@ -1685,7 +1685,7 @@
+       n_units = 1000;
+     }
+ 
+-  int __fuzzfix147 = n_units == 0;
++  int __fuzzfix147=(((initial_read-n_units)==0)||(page_size>=0));
+   if (__fuzzfix147)
+     {
+       error (0, 0, "%s: %s", _("invalid number of lines"), quote ("0"));

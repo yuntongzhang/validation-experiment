@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-14 15:19:44.928411910 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-14 15:20:12.691775108 +0000
+@@ -831,7 +831,7 @@
+ {
+ 	OJPEGState* sp=(OJPEGState*)tif->tif_data;
+ 	(void)s;
+-        int __fuzzfix51 = 0;
++        int __fuzzfix51=((sp->tif)>512);
+         if (__fuzzfix51) return 0;
+ 
+         int __fuzzfix52 = (sp->libjpeg_jpeg_query_style == 0);

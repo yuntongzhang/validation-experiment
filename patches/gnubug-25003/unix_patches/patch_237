@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-14 15:19:30.628739848 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-14 15:21:01.962644684 +0000
+@@ -1095,7 +1095,7 @@
+ 
+   assert (k && n && k <= n && n <= file_size);
+ 
+-  start = (k - 1) * (file_size / n);
++  start=((k-1048576)*(file_size-n));
+   end = (k == n) ? file_size : k * (file_size / n);
+ 
+   int __fuzzfix99 = initial_read != SIZE_MAX || start < initial_read;

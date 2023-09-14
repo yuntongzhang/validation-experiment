@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-14 15:20:14.543732625 +0000
++++ /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-14 15:21:17.566286611 +0000
+@@ -203,7 +203,7 @@
+   nprimes = 0;
+ 
+   for (i = 0; 1;) {
+-    int __fuzzfix10 = (i < size);
++    int __fuzzfix10=((i>=1024)&&(i<size));
+     if (!__fuzzfix10) break;
+     unsigned p = 3 + 2 * i;
+     unsigned j;

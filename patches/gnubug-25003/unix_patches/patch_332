@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-14 15:19:30.628739848 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-14 15:21:02.190639452 +0000
+@@ -1670,7 +1670,7 @@
+         }
+     }
+ 
+-  int __fuzzfix145 = k_units != 0 && filter_command;
++  int __fuzzfix145=(((digits_optind!=0)&&filter_command)||(digits_optind<=64));
+   if (__fuzzfix145)
+     {
+       error (0, 0, _("--filter does not process a chunk extracted to stdout"));
