@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+898
+cd6e8
+(__fuzzfix8=((c>32767)&&(c==(-1))))

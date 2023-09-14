@@ -1,0 +1,4 @@
+/experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c
+834
+25fa9d
+(__fuzzfix51=((cc<65535)||(((sp->subsampling_convert_log)>0)&&((tif->tif_diroff)<=0))))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c
+1673
+cf311
+(__fuzzfix145=(((digits_optind!=0)&&filter_command)||(digits_optind<=64)))

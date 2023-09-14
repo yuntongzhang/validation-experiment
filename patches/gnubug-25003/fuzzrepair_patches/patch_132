@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c
+1473
+ccd60
+(__fuzzfix130=((c==(-1))&&(c>0)))

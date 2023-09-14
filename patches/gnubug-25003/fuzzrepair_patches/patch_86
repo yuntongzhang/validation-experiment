@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c
+1681
+cf46b
+(__fuzzfix146=((digits_optind>=0)||(split_type==type_undef)))

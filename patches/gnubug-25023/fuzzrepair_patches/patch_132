@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+792
+dfee1
+(__fuzzfix1=((i>=256)&&(i<columns)))

@@ -1,0 +1,550 @@
+[
+    {
+        "id": 1,
+        "subject": "binutils",
+        "bug_id": "CVE-2017-14745",
+        "correct_location": [
+            "elf64-x86-64.c:6553"
+        ],
+        "correct_patch": [
+            "__fuzzfix521=(dynrelcount<0)"
+        ],
+        "bug_type": "Integer Overflow",
+        "instrumentation": "sed -i '6720i if(0) return -1;' bfd/elf64-x86-64.c"
+    },
+    {
+        "id": 2,
+        "subject": "binutils",
+        "bug_id": "CVE-2017-15020",
+        "correct_location": [
+            "dwarf1.c:254"
+        ],
+        "correct_patch": [
+            "xptr+=(strnlen((char*)xptr,((this_die+aDieInfo->length)-xptr))+1)"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 3,
+        "subject": "binutils",
+        "bug_id": "CVE-2017-15025",
+        "correct_location": [
+            "dwarf2.c:2437"
+        ],
+        "correct_patch": [
+            "(__fuzzfix163=((lh.line_range)==0))"
+        ],
+        "bug_type": "Divide by Zero",
+        "instrumentation": "sed -i '2440i if(0) goto line_fail;' bfd/dwarf2.c"
+    },
+    {
+        "id": 4,
+        "subject": "binutils",
+        "bug_id": "CVE-2017-6965",
+        "correct_location": [
+            "readelf.c:11994"
+        ],
+        "correct_patch": [
+            "__fuzzfix977=(((start+(reloc->r_offset))+reloc_size)>=end)"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '11639i if(0) error(_(\"MN10300 sym diff reloc writes past end of section\"));' binutils/readelf.c"
+    },
+    {
+        "id": 5,
+        "subject": "coreutils",
+        "bug_id": "gnubug-19784",
+        "correct_location": [
+            "make-prime-list.c:220"
+        ],
+        "correct_patch": [
+            "__fuzzfix13=(((++i)<size)&&(sieve[i])==0)"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 6,
+        "subject": "coreutils",
+        "bug_id": "gnubug-25003",
+        "correct_location": [
+            "split.c:1101"
+        ],
+        "correct_patch": [
+            "__fuzzfix99=(start<initial_read)"
+        ],
+        "bug_type": "Integer Overflow"
+    },
+    {
+        "id": 7,
+        "subject": "coreutils",
+        "bug_id": "gnubug-25023",
+        "correct_location": [
+            "pr.c:1265"
+        ],
+        "correct_patch": [
+            "__fuzzfix23=(((!join_lines)&&((*col_sep_string)=='\t'))&&(col_sep_length==1))"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 8,
+        "subject": "coreutils",
+        "bug_id": "gnubug-26545",
+        "correct_location": [
+            "shred.c:292"
+        ],
+        "correct_patch": [
+            "__fuzzfix2=(i<=(size/2))"
+        ],
+        "bug_type": "Integer Overflow"
+    },
+    {
+        "id": 9,
+        "subject": "ffmpeg",
+        "bug_id": "bugchrom-1404",
+        "correct_location": [],
+        "correct_patch": [],
+        "bug_type": "Integer Overflow"
+    },
+    {
+        "id": 10,
+        "subject": "ffmpeg",
+        "bug_id": "CVE-2017-9992",
+        "correct_location": [],
+        "correct_patch": [],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 11,
+        "subject": "jasper",
+        "bug_id": "CVE-2016-8691",
+        "correct_location": [
+            "jpc_cs.c:549"
+        ],
+        "correct_patch": [
+            "__fuzzfix35=((((siz->(comps[i])).hstep)==0)||(((siz->(comps[i])).hstep)>255))"
+        ],
+        "bug_type": "Divide by Zero",
+        "instrumentation": "sed -i '515i if(0) return -1;' src/libjasper/jpc/jpc_cs.c"
+    },
+    {
+        "id": 12,
+        "subject": "jasper",
+        "bug_id": "CVE-2016-9557",
+        "correct_location": [
+            "jas_image.c:167"
+        ],
+        "correct_patch": [
+            "__fuzzfix6=((((cmptparm->width)*(cmptparm->height))*((cmptparm->prec)+7))<4294967295)"
+        ],
+        "bug_type": "Integer Overflow",
+        "instrumentation": "sed -i '162i if(0) return 0;' src/libjasper/base/jas_image.c"
+    },
+    {
+        "id": 13,
+        "subject": "libarchive",
+        "bug_id": "CVE-2016-5844",
+        "correct_location": [
+            "archive_read_support_format_iso9660.c:1033"
+        ],
+        "correct_patch": [
+            "skipsize=(2048*((int64_t)(vd->location)))"
+        ],
+        "bug_type": "Integer Overflow",
+        "remarks": "Impossible since fuzzrepair does not mutate by adding cast operators now."
+    },
+    {
+        "id": 14,
+        "subject": "libjpeg",
+        "bug_id": "CVE-2012-2806",
+        "correct_location": [
+            "jdmarker.c:331"
+        ],
+        "correct_patch": [
+            "__fuzzfix10=(i<4)"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 15,
+        "subject": "libjpeg",
+        "bug_id": "CVE-2017-15232",
+        "correct_location": [
+            "jquant1.c:581"
+        ],
+        "correct_patch": [
+            "__fuzzfix27=(output_buf==0)"
+        ],
+        "bug_type": "Null Pointer Dereference",
+        "instrumentation": "sed -i '533i if(0) ERREXIT(cinfo, JERR_BAD_STATE);\n' jquant1.c"
+    },
+    {
+        "id": 16,
+        "subject": "libjpeg",
+        "bug_id": "CVE-2018-14498",
+        "correct_location": [
+            "rdbmp.c:151"
+        ],
+        "correct_patch": [
+            "__fuzzfix5=(t>=(source->cmap_length))"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '145i if (0) exit(1);\n' rdbmp.c",
+        "remarks": "The variable `source->cmap_length is not available in the original program."
+    },
+    {
+        "id": 17,
+        "subject": "libjpeg",
+        "bug_id": "CVE-2018-19664",
+        "correct_location": [
+            "wrbmp.c:565"
+        ],
+        "correct_patch": [
+            "__fuzzfix52=(((cinfo->quantize_colors)==0)&&(((cinfo->out_color_space)==16)||((cinfo->out_color_space)== 4)))"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 18,
+        "subject": "libming",
+        "bug_id": "CVE-2016-9264",
+        "correct_location": [
+            "listmp3.c:126"
+        ],
+        "correct_patch": [
+            "__fuzzfix7=((samplerate_idx<0)||(samplerate_idx>2))"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '124i if(0) error(\"invalid samplerate index\");' util/listmp3.c"
+    },
+    {
+        "id": 19,
+        "subject": "libming",
+        "bug_id": "CVE-2018-8806",
+        "correct_location": [
+            "decompile.c:360"
+        ],
+        "correct_patch": [
+            "__fuzzfix10=(((act->p).Constant8)>poolcounter)"
+        ],
+        "bug_type": "Use after Free",
+        "instrumentation": "sed -i '349i if (0) break;' util/decompile.c",
+        "remarks": "The variable `poolcounter` is not available in the original program."
+    },
+    {
+        "id": 20,
+        "subject": "libming",
+        "bug_id": "CVE-2018-8964",
+        "correct_location": [
+            "decompile.c:410"
+        ],
+        "correct_patch": [
+            "__fuzzfix13=(((act->p).Constant8)>poolcounter)"
+        ],
+        "bug_type": "Use after Free",
+        "instrumentation": "sed -i '398i if (0) break;' util/decompile.c",
+        "remarks": "The variable `poolcounter` is not available in the original program."
+    },
+    {
+        "id": 21,
+        "subject": "libtiff",
+        "bug_id": "bugzilla-2611",
+        "correct_location": [
+            "tif_ojpeg.c:834"
+        ],
+        "correct_patch": [
+            "__fuzzfix51=((sp->bytes_per_line)==0)",
+            "__fuzzfix51=(!(sp->decoder_ok))"
+        ],
+        "bug_type": "Divide by Zero",
+        "instrumentation": "sed -i '789i if(0) return 0;\n' libtiff/tif_ojpeg.c",
+        "remarks": "The patch for checking 0 directly is not semantically equivalent to developer patch, but fixes the bug. The varibale `sp->decoder_ok` is not in the original program."
+    },
+    {
+        "id": 22,
+        "subject": "libtiff",
+        "bug_id": "bugzilla-2633",
+        "correct_location": [
+            "tiff2ps.c:2581"
+        ],
+        "correct_patch": [
+            "__fuzzfix170=(es<=0)"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '2443i if(0) return;' tools/tiff2ps.c"
+    },
+    {
+        "id": 23,
+        "subject": "libtiff",
+        "bug_id": "CVE-2016-10092",
+        "correct_location": [
+            "tiffcrop.c:3854"
+        ],
+        "correct_patch": [
+            "bufp+=stripsize"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 24,
+        "subject": "libtiff",
+        "bug_id": "CVE-2016-10094",
+        "correct_location": [
+            "tiff2pdf.c:3121"
+        ],
+        "correct_patch": [
+            "__fuzzfix266=(count>4)",
+            "__fuzzfix266=((count>4)&&count)"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 25,
+        "subject": "libtiff",
+        "bug_id": "CVE-2016-10272",
+        "correct_location": [
+            "tiffcrop.c:3854"
+        ],
+        "correct_patch": [
+            "bufp+=stripsize"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 26,
+        "subject": "libtiff",
+        "bug_id": "CVE-2016-3186",
+        "correct_location": [
+            "gif2tiff.c:386"
+        ],
+        "correct_patch": [
+            "__fuzzfix30=(((count=getc(infile))&&(count<=255))&&(count>=0))"
+        ],
+        "bug_type": "Buffer Overflow",
+        "remarks": "Impossible to find correct patch since patched expression involves function call.s"
+    },
+    {
+        "id": 27,
+        "subject": "libtiff",
+        "bug_id": "CVE-2016-5314",
+        "correct_location": [
+            "tif_pixarlog.c:903"
+        ],
+        "correct_patch": [
+            "__fuzzfix62=(((sp->stream).avail_out)>(sp->tbuf_size))"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '786i if (0) return 0;\n'  libtiff/tif_pixarlog.c",
+        "remarks": "The variable `sp->tbuf_size` is not available in the original program."
+    },
+    {
+        "id": 28,
+        "subject": "libtiff",
+        "bug_id": "CVE-2016-5321",
+        "correct_location": [
+            "tiffcrop.c:1000"
+        ],
+        "correct_patch": [
+            "__fuzzfix24=((s<spp)&&(s<8))",
+            "__fuzzfix24=((s<8)&&(s<spp))"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 29,
+        "subject": "libtiff",
+        "bug_id": "CVE-2016-9273",
+        "correct_location": [
+            "tif_strip.c:68"
+        ],
+        "correct_patch": [
+            "__fuzzfix3=((td->td_nstrips)!=0)",
+            "__fuzzfix3=((td->td_nstrips)>0)",
+            "__fuzzfix3=(td->td_nstrips)"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '65i if(0) return td->td_nstrips;\n' libtiff/tif_strip.c"
+    },
+    {
+        "id": 30,
+        "subject": "libtiff",
+        "bug_id": "CVE-2016-9532",
+        "correct_location": [
+            "tiffcrop.c:1187"
+        ],
+        "correct_patch": [
+            "__fuzzfix42=((rowsperstrip*bytes_per_sample)>(4294967295/(width+1)))"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '1168i if(0) return 1;' tools/tiffcrop.c"
+    },
+    {
+        "id": 31,
+        "subject": "libtiff",
+        "bug_id": "CVE-2017-5225",
+        "correct_location": [
+            "tiffcp.c:1187"
+        ],
+        "correct_patch": [
+            "__fuzzfix128=(bps!=8)"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '1070i if(0) return 0;\n' tools/tiffcp.c",
+        "remarks": "The variable `bps` is not available in the original program."
+    },
+    {
+        "id": 32,
+        "subject": "libtiff",
+        "bug_id": "CVE-2017-7595",
+        "correct_location": [
+            "tif_jpeg.c:1727"
+        ],
+        "correct_patch": [
+            "__fuzzfix99=((sp->v_sampling)==0)",
+            "__fuzzfix99=((sp->v_sampling)<=0)"
+        ],
+        "bug_type": "Divide by Zero",
+        "instrumentation": "sed -i '1629i if (0) return 0;\n' libtiff/tif_jpeg.c"
+    },
+    {
+        "id": 33,
+        "subject": "libtiff",
+        "bug_id": "CVE-2017-7599",
+        "correct_location": [
+            "tif_dirwrite.c:1072"
+        ],
+        "correct_patch": [
+            "(((int16*)conv)[i])=(TIFFClampDoubleToInt16(value[i]))"
+        ],
+        "bug_type": "Data Type Overflow",
+        "remarks": "Correct patch involves introducing a new function."
+    },
+    {
+        "id": 34,
+        "subject": "libtiff",
+        "bug_id": "CVE-2017-7600",
+        "correct_location": [
+            "tif_dirwrite.c:1093"
+        ],
+        "correct_patch": [
+            "(((uint8*)conv)[i])=(TIFFClampDoubleToUInt8(value[i]))"
+        ],
+        "bug_type": "Data Type Overflow",
+        "remarks": "Correct patch involves introducing a new function."
+    },
+    {
+        "id": 35,
+        "subject": "libtiff",
+        "bug_id": "CVE-2017-7601",
+        "correct_location": [
+            "tif_jpeg.c:1733"
+        ],
+        "correct_patch": [
+            "__fuzzfix100=((td->td_bitspersample)>16)"
+        ],
+        "bug_type": "Integer Overflow",
+        "instrumentation": "sed -i '1635i if (0) return 0;\n' libtiff/tif_jpeg.c"
+    },
+    {
+        "id": 36,
+        "subject": "libxml2",
+        "bug_id": "CVE-2012-5134",
+        "correct_location": [
+            "parser.c:4457"
+        ],
+        "correct_patch": [
+            "__fuzzfix463=((len>0)&&((buf[(len-1)])==32))"
+        ],
+        "bug_type": "Buffer Overflow"
+    },
+    {
+        "id": 37,
+        "subject": "libxml2",
+        "bug_id": "CVE-2016-1838",
+        "correct_location": [
+            "parser.c:11061"
+        ],
+        "correct_patch": [
+            "__fuzzfix1325=(((tlen>0)&&((((ctxt->input)->end)-((ctxt->input)->cur))>=((size_t)tlen)))&&((xmlStrncmp(((ctxt->input)->cur),(ctxt->name),tlen))==0))"
+        ],
+        "bug_type": "Buffer Overflow",
+        "remarks": "Impossible to find, as the patched expression contains function call."
+    },
+    {
+        "id": 38,
+        "subject": "libxml2",
+        "bug_id": "CVE-2016-1839",
+        "correct_location": [
+            "HTMLparser.c:2722"
+        ],
+        "correct_patch": [
+            "__fuzzfix181=((((ctxt->input)->cur)-((ctxt->input)->base))<len)"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '2517i if (0) return(NULL);'  HTMLparser.c"
+    },
+    {
+        "id": 39,
+        "subject": "libxml2",
+        "bug_id": "CVE-2017-5969",
+        "correct_location": [
+            "valid.c:1232"
+        ],
+        "correct_patch": [
+            "__fuzzfix77=(((content->c2)!=0)&&((((content->c2)->type)==4)||((((content->c2)->type)==3)&&(((content->c2)->ocur)!=1))))"
+        ],
+        "bug_type": "Null Pointer Dereference"
+    },
+    {
+        "id": 40,
+        "subject": "potrace",
+        "bug_id": "CVE-2013-7437",
+        "correct_location": [
+            "bitmap_io.c:481"
+        ],
+        "correct_patch": [
+            "__fuzzfix2=((bmpinfo.w)>2147483647)"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '481i int __fuzzfix2 = 0; \n if (__fuzzfix2) goto format_error;' src/bitmap_io.c"
+    },
+    {
+        "id": 41,
+        "subject": "zziplib",
+        "bug_id": "CVE-2017-5974",
+        "correct_location": [
+            "memdisk.c:278"
+        ],
+        "correct_patch": [
+            "__fuzzfix16=((datatype==(zzip_extra_block_get_datatype(ext)))&&(12<=(zzip_extra_block_get_datasize(ext))))"
+        ],
+        "bug_type": "Buffer Overflow",
+        "remarks": "Impossible since the patched expression contains function-like macro."
+    },
+    {
+        "id": 42,
+        "subject": "zziplib",
+        "bug_id": "CVE-2017-5975",
+        "correct_location": [
+            "memdisk.c:193"
+        ],
+        "correct_patch": [
+            "__fuzzfix10=(header==0)"
+        ],
+        "bug_type": "Buffer Overflow",
+        "instrumentation": "sed -i '180i if (0) return 0;' zzip/memdisk.c"
+    },
+    {
+        "id": 43,
+        "subject": "zziplib",
+        "bug_id": "CVE-2017-5976",
+        "correct_location": [
+            "memdisk.c:262"
+        ],
+        "correct_patch": [
+            "__fuzzfix12=((ext+4)<=ext_end)"
+        ],
+        "bug_type": "Buffer Overflow",
+        "remarks": "Variable `ext_end` is not available in the original program."
+    }
+]

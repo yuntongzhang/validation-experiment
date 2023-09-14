@@ -1,0 +1,4 @@
+/experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c
+834
+25fa9d
+(__fuzzfix51=(((sp->actable_offset_count)>2)||((sp->in_buffer_cur)<64)))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+1090
+cf281
+(__fuzzfix13=((n_digits>=0)||(parallel_files&&print_across_flag)))

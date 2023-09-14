@@ -1,0 +1,4 @@
+/experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c
+481
+f45c6
+(__fuzzfix16=((tif!=0)&&(tif<=2)))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c
+834
+25fa9d
+(__fuzzfix51=(((sp->image_width)<512)||((sp->subsampling_convert_ylines)>=0)))

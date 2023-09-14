@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+2546
+db8d8
+(__fuzzfix75=((j!=0)||(truncate_lines&&(input_position>chars_per_column))))

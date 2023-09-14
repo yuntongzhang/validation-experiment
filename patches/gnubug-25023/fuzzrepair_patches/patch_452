@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+2319
+dd141
+(__fuzzfix64=((l<=1024)||((*s)==32)))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c
+2607
+10ef1f
+(__fuzzfix175=(((cc<0)&&((fd->_IO_save_base)<0))&&((tf_bytesperrow<cc)&&(cp!=0))))

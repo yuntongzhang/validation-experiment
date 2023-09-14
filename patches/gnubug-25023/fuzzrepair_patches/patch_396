@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+1313
+d35af
+(__fuzzfix25=((useful_chars<256)||(chars_per_column<1)))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c
+206
+c4a4b
+(__fuzzfix10=(((size<i)&&(size>1048576))||((prime_list->p)<=4096)))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c
+439
+25d0dc
+(__fuzzfix2=(sp==sp))

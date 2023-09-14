@@ -1,0 +1,4 @@
+/experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c
+2590
+10ec41
+(__fuzzfix172=(((row<h)||((fd->_vtable_offset)<=0))&&(h>16)))

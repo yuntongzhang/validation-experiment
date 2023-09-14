@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c
+1101
+d5989
+(__fuzzfix99=(((initial_read!=0)||((start++)<initial_read))||(initial_read<0)))

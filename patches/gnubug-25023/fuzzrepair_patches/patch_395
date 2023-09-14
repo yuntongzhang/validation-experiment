@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+858
+d1778
+(__fuzzfix7=((optarg_S>=32)||(INT_MAX<len)))

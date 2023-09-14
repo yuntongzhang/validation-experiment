@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+1521
+d78f1
+(__fuzzfix31=(((p->fp)++)==0))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+1235
+d2d34
+(__fuzzfix21=((chars_used_by_number<=32)||(number_of_files==0)))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c
+1098
+d5858
+(start=((k/(initial_read+8))*(file_size/(initial_read-n))))

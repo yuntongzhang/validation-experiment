@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+1085
+cf16e
+(__fuzzfix12=((n_alloc==0)||(parallel_files&&explicit_columns)))

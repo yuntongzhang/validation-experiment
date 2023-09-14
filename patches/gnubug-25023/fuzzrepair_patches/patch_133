@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+2515
+db27d
+(__fuzzfix73=(((c==102)||((q->lines_stored)!=0))||(p->full_page_printed)))

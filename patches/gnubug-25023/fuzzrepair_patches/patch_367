@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+2515
+db27d
+(__fuzzfix73=((last_input_position==0)||((c==last_input_position)&&(p->full_page_printed))))

@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c
+296
+d5192
+(__fuzzfix3=((((size+i)>=16)&&(i>0))&&((i-size)<i)))

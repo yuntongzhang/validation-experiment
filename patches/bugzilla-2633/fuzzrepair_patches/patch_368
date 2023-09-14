@@ -1,0 +1,4 @@
+/experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c
+478
+f43ee
+(__fuzzfix10=((argc>4)&&((argc-optind)>0)))

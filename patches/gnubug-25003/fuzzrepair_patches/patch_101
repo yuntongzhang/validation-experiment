@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c
+1426
+d14f1
+(__fuzzfix129=((slash<65535)&&(slash!=optarg)))

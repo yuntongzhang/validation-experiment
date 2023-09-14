@@ -1,0 +1,4 @@
+/experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c
+1148
+cfbb8
+(__fuzzfix17=((argc!=0)||(n_files==0)))
