@@ -1,5 +1,0 @@
---- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:12:28.804706392 +0000
-+++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:14:21.630042125 +0000
-@@ -1473 +1473 @@
--      int __fuzzfix130 = c == -1;
-+      int __fuzzfix130 =(c

@@ -1,5 +1,0 @@
---- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:12:27.948726658 +0000
-+++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:14:21.998033456 +0000
-@@ -1090 +1090 @@
--  int __fuzzfix13 = parallel_files && print_across_flag;
-+  int __fuzzfix13 =((n_digits>

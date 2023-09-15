@@ -1,5 +1,0 @@
---- /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-15 08:12:26.580759048 +0000
-+++ /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-15 08:14:23.929987948 +0000
-@@ -534 +534 @@
--          int __fuzzfix15 = 0 < ssize;
-+          int __fuzzfix15 =(0<0);

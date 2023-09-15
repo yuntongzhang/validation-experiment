@@ -1,5 +1,0 @@
---- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:12:27.948726658 +0000
-+++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:14:21.234051453 +0000
-@@ -1521 +1521 @@
--  int __fuzzfix31 = p->fp == NULL;
-+  int __fuzzfix31 =((p->fp)!

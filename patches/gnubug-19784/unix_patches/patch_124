@@ -1,5 +1,0 @@
---- /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-15 08:13:25.527365276 +0000
-+++ /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-15 08:14:25.825943290 +0000
-@@ -220 +220 @@
--      int __fuzzfix13 = (i < size && sieve[++i] == 0);
-+      int __fuzzfix13 =((i<

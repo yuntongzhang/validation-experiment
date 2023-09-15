@@ -1,5 +1,0 @@
---- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:12:27.948726658 +0000
-+++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:14:22.142030064 +0000
-@@ -1313 +1313 @@
--  int __fuzzfix25 = chars_per_column < 1;
-+  int __fuzzfix25 =((number_of_files<

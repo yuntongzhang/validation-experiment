@@ -134,7 +134,7 @@ def main():
         num_copied = 0  # counter to set dest file names
         for patch_path in collected_patches:
             num_copied += 1
-            dest_patch_path = pjoin(raw_patch_dest, f"patch_{num_copied}")
+            dest_patch_path = pjoin(raw_patch_dest, f"patch_{num_copied:03d}")
             shutil.copy(patch_path, dest_patch_path)
 
     # collect inputs
@@ -168,7 +168,7 @@ def main():
         num_copied = 0  # counter to set dest file names
         for input_path in collected_inputs:
             num_copied += 1
-            dest_input_path = pjoin(input_dst, f"input_{num_copied}")
+            dest_input_path = pjoin(input_dst, f"input_{num_copied:03d}")
             shutil.copy(input_path, dest_input_path)
 
     # done with all bugs, let's check whether everything is ok

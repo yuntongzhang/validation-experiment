@@ -1,5 +1,0 @@
---- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:12:28.804706392 +0000
-+++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:14:21.914035435 +0000
-@@ -1673 +1673 @@
--  int __fuzzfix145 = k_units != 0 && filter_command;
-+  int __fuzzfix145 =(((k_units+digits_optind)!

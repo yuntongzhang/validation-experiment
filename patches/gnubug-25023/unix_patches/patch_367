@@ -1,5 +1,0 @@
---- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:12:27.948726658 +0000
-+++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:14:21.994033550 +0000
-@@ -2515 +2515 @@
--  int __fuzzfix73 = c == '\f' && p->full_page_printed;
-+  int __fuzzfix73 =((last_input_position
