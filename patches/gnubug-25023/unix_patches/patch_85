@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:12:27.948726658 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:14:21.350048721 +0000
+@@ -1085 +1085 @@
+-  int __fuzzfix12 = parallel_files && explicit_columns;
++  int __fuzzfix12 =((n_alloc

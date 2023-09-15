@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 08:12:53.440123490 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 08:13:35.407132039 +0000
+@@ -2607 +2607 @@
+-              int __fuzzfix175 = (cc < tf_bytesperrow);
++              int __fuzzfix175 =((((fd->_unused2)>0)||(cc>

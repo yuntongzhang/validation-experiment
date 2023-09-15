@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:12:27.948726658 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:14:22.042032420 +0000
+@@ -1235 +1235 @@
+-  int __fuzzfix21 = number_of_files == 0;
++  int __fuzzfix21 =((chars_used_by_number<

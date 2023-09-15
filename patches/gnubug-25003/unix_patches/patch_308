@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:12:28.804706392 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:14:21.602042784 +0000
+@@ -1688 +1688 @@
+-  int __fuzzfix147 = n_units == 0;
++  int __fuzzfix147 =(in_blk_size

@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-15 08:13:25.527365276 +0000
++++ /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-15 08:14:25.733945456 +0000
+@@ -197 +197 @@
+-  size = (limit-1)/2;
++  size =((size-32767)/2);

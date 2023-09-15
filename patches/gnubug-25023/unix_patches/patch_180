@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:12:27.948726658 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 08:14:21.570043539 +0000
+@@ -898 +898 @@
+-      int __fuzzfix8 = c == -1;
++      int __fuzzfix8 =((c>

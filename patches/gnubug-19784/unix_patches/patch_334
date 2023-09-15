@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-15 08:13:25.527365276 +0000
++++ /experiment/vulnloc/coreutils/gnubug-19784/src/src/make-prime-list.c	2023-09-15 08:14:26.113936506 +0000
+@@ -190 +190 @@
+-  int __fuzzfix8 = (limit < 3);
++  int __fuzzfix8 =(limit<(2-(nprimes-size)));

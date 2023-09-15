@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-15 08:12:26.580759048 +0000
++++ /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-15 08:14:23.637994825 +0000
+@@ -1362 +1362 @@
+-      int __fuzzfix43 = i < n_files;
++      int __fuzzfix43 =(argc<argc);

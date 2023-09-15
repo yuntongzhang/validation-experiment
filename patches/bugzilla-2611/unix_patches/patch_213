@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-15 08:12:48.344244008 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-15 08:13:25.727360554 +0000
+@@ -834 +834 @@
+-        int __fuzzfix51 = 0;
++        int __fuzzfix51 =((tif->tif_rawcc)<((sp->restart_index)-512));

@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:12:28.804706392 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:14:21.378048061 +0000
+@@ -1759 +1759 @@
+-      int __fuzzfix157 = file_size < 0;
++      int __fuzzfix157 =((file_size>

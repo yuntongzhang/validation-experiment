@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:12:28.804706392 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 08:14:20.350072278 +0000
+@@ -1098 +1098 @@
+-  start = (k - 1) * (file_size / n);
++  start =((k-k)*((file_size+8)-n));

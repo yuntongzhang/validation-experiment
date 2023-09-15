@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-15 08:12:26.580759048 +0000
++++ /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-15 08:14:24.113983613 +0000
+@@ -999 +999 @@
+-          int __fuzzfix30 = i < flags->n_iterations + flags->zero_fill;
++          int __fuzzfix30 =(i<0);
