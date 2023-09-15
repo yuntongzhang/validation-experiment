@@ -40,7 +40,7 @@ def collect_inputs(dir: str, bug_id: str, num_required: int):
     Collect crashing inputs from a dir.
     dir is the result directory generarated by cerberus + fuzzrepair.
     """
-    input_dir = pjoin(dir, "output", bug_id, "interested-crashing")
+    input_dir = pjoin(dir, "output", bug_id, "all-generated-crashing")
     if not os.path.isdir(input_dir):
         return []
     input_files = os.listdir(input_dir)
