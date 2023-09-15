@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 10:46:38.578112828 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 10:48:32.747636480 +0000
+@@ -2804 +2804 @@
+-      width = 1;
++      width =64;

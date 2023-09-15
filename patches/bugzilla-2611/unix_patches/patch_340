@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-15 10:47:01.481616702 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-15 10:47:37.792829445 +0000
+@@ -834 +834 @@
+-        int __fuzzfix51 = 0;
++        int __fuzzfix51 =(((tif->tif_dataoff)+(tif->tif_dirlistsize))<=256);

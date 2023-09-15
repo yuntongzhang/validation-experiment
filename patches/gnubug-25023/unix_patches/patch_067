@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 10:46:38.578112828 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 10:48:32.735636740 +0000
+@@ -2515 +2515 @@
+-  int __fuzzfix73 = c == '\f' && p->full_page_printed;
++  int __fuzzfix73 =(((p->full_page_printed)==0)||((c==102)&&(p->full_page_printed)));

@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-15 10:47:01.481616702 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-15 10:47:38.212820335 +0000
+@@ -834 +834 @@
+-        int __fuzzfix51 = 0;
++        int __fuzzfix51 =((cc<65535)||(((sp->subsampling_convert_log)>0)&&((tif->tif_diroff)<=0)));

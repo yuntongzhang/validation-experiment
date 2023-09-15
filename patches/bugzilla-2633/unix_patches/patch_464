@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 10:47:01.613613841 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 10:47:47.748613453 +0000
+@@ -2622 +2622 @@
+-                  c = *cp++ + adjust;
++                  c =((*cp)+adjust);

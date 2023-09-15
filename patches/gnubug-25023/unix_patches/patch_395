@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 10:46:38.578112828 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-15 10:48:33.427621707 +0000
+@@ -858 +858 @@
+-  int __fuzzfix7 = INT_MAX < len;
++  int __fuzzfix7 =((optarg_S>=32)||(INT_MAX<len));

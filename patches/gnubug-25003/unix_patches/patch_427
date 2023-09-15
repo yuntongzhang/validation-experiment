@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 10:46:44.949974840 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 10:48:36.483555317 +0000
+@@ -1807 +1807 @@
+-      int __fuzzfix160 = k_units == 0;
++      int __fuzzfix160 =(k_units==(k_units+0));

@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 10:47:01.613613841 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 10:47:47.004629597 +0000
+@@ -2581 +2581 @@
+-        int __fuzzfix170 = 0;
++        int __fuzzfix170 =((fd->_chain)!=0);

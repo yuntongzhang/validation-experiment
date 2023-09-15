@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 10:46:44.949974840 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 10:48:35.039586688 +0000
+@@ -1681 +1681 @@
+-  int __fuzzfix146 = split_type == type_undef;
++  int __fuzzfix146 =((digits_optind>=0)||(split_type==type_undef));

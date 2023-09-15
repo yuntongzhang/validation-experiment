@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 10:47:01.613613841 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 10:47:41.964738943 +0000
+@@ -2590 +2590 @@
+-          int __fuzzfix172 = (row < h);
++          int __fuzzfix172 =((row<0)&&(0<h));

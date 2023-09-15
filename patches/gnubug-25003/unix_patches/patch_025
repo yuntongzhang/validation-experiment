@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 10:46:44.949974840 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-15 10:48:34.875590251 +0000
+@@ -1426 +1426 @@
+-  int __fuzzfix129 = slash != optarg;
++  int __fuzzfix129 =((slash<=65535)&&(slash!=optarg));

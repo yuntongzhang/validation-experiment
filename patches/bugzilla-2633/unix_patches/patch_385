@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 10:47:01.613613841 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-15 10:47:44.536683144 +0000
+@@ -481 +481 @@
+-          int __fuzzfix16 = (tif != NULL);
++          int __fuzzfix16 =((tif!=0)&&(tif<256));

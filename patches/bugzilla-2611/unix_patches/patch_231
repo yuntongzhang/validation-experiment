@@ -1,0 +1,5 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-15 10:47:01.481616702 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-15 10:47:37.408837775 +0000
+@@ -439 +439 @@
+-        int __fuzzfix2 = (sp == NULL);
++        int __fuzzfix2 =(sp==sp);
