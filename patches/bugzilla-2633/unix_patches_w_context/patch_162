@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:50:08.409059591 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:50:59.267686223 +0000
+@@ -2604,7 +2604,7 @@
+             int adjust;
+             cc = 0;
+             for (; 1; cc += samplesperpixel) {
+-              int __fuzzfix175 = (cc < tf_bytesperrow);
++              int __fuzzfix175 =((tf_buf>cc)&&(cc<=0));
+               if (!__fuzzfix175) break;
+               DOBREAK(breaklen, nc, fd);
+               /*

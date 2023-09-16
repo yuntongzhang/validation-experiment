@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:49:49.501574184 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:51:55.342188863 +0000
+@@ -895,7 +895,7 @@
+     {
+       int oi = -1;
+       int c = getopt_long (argc, argv, short_options, long_options, &oi);
+-      int __fuzzfix8 = c == -1;
++      int __fuzzfix8 =((c>=0)&&(c==(-1)));
+       if (__fuzzfix8)
+         break;
+ 

@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:49:49.501574184 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:51:55.806176542 +0000
+@@ -855,7 +855,7 @@
+ separator_string (const char *optarg_S)
+ {
+   size_t len = strlen (optarg_S);
+-  int __fuzzfix7 = INT_MAX < len;
++  int __fuzzfix7 =((optarg_S>=32)||(INT_MAX<len));
+   if (__fuzzfix7)
+     integer_overflow ();
+   col_sep_length = len;

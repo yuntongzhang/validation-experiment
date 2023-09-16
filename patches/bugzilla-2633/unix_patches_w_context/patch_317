@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:50:08.409059591 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:51:03.407575093 +0000
+@@ -2587,7 +2587,7 @@
+           return;
+         }
+         for (row = 0; 1; row++) {
+-          int __fuzzfix172 = (row < h);
++          int __fuzzfix172 =(((row<h)||(h>0))&&(h==2147483647));
+           if (!__fuzzfix172) break;
+           int __fuzzfix173 = (TIFFReadScanline(tif, tf_buf, row, 0) < 0);
+           if (__fuzzfix173) break;

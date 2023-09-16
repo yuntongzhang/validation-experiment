@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-16 05:49:53.369468730 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-16 05:51:50.866307775 +0000
+@@ -1678,7 +1678,7 @@
+     }
+ 
+   /* Handle default case.  */
+-  int __fuzzfix146 = split_type == type_undef;
++  int __fuzzfix146 =((digits_optind>=0)||(split_type==type_undef));
+   if (__fuzzfix146)
+     {
+       split_type = type_lines;

@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-16 05:50:08.813048620 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2611/src/libtiff/tif_ojpeg.c	2023-09-16 05:50:58.247713618 +0000
+@@ -436,7 +436,7 @@
+ 
+         /* state block */
+ 	sp=_TIFFmalloc(sizeof(OJPEGState));
+-        int __fuzzfix2 = (sp == NULL);
++        int __fuzzfix2 =(sp==sp);
+         if (__fuzzfix2) {
+           TIFFErrorExt(tif->tif_clientdata, module,
+                        "No space for OJPEG state block");

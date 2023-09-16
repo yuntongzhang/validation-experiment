@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:49:49.501574184 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:51:55.766177604 +0000
+@@ -2512,7 +2512,7 @@
+ 
+   last_input_position = input_position;
+ 
+-  int __fuzzfix73 = c == '\f' && p->full_page_printed;
++  int __fuzzfix73 =((last_input_position<2147483647)||((c==102)&&(p->full_page_printed)));
+   if (__fuzzfix73)
+     if ((c = getc (p->fp)) == '\n')
+       c = getc (p->fp);

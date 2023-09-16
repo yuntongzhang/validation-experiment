@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:50:08.409059591 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:51:00.139662807 +0000
+@@ -2578,7 +2578,7 @@
+ 	unsigned char *cp, c;
+ 
+ 	(void) w;
+-        int __fuzzfix170 = 0;
++        int __fuzzfix170 =(tf_buf>=0);
+         if (__fuzzfix170) return;
+         tf_buf = (unsigned char *) _TIFFmalloc(tf_bytesperrow);
+         int __fuzzfix171 = (tf_buf == NULL);

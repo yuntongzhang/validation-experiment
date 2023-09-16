@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:50:08.409059591 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:51:05.587516614 +0000
+@@ -2619,7 +2619,7 @@
+                   c = *cp++ + adjust;
+                   PUTHEX(c, fd);
+                 case 3:
+-                  c = *cp++ + adjust;
++                  c =((*cp)-adjust);
+                   PUTHEX(c, fd);
+                 case 2:
+                   c = *cp++ + adjust;

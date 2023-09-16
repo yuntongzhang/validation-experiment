@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:49:49.501574184 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:51:55.322189395 +0000
+@@ -2310,7 +2310,7 @@
+     {
+       for (; 1; --separators_not_printed)
+         {
+-          int __fuzzfix63 = separators_not_printed > 0;
++          int __fuzzfix63 =((s<0)&&(separators_not_printed>s));
+           if (!__fuzzfix63) break;
+           while (l-- > 0)
+             {

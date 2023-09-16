@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:49:49.501574184 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:51:55.646180791 +0000
+@@ -2298,7 +2298,7 @@
+   char const *s = col_sep_string;
+   int l = col_sep_length;
+ 
+-  int __fuzzfix61 = separators_not_printed <= 0;
++  int __fuzzfix61 =((l>=0)||(separators_not_printed<=s));
+   if (__fuzzfix61)
+     {
+       /* We'll be starting a line with chars_per_margin, anything else? */

@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-16 05:49:53.369468730 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-16 05:51:51.310295976 +0000
+@@ -1423,7 +1423,7 @@
+ {
+   *n_units = xdectoumax (slash + 1, 1, UINTMAX_MAX, "",
+                          _("invalid number of chunks"), 0);
+-  int __fuzzfix129 = slash != optarg;
++  int __fuzzfix129 =((slash<256)&&(slash!=optarg));
+   if (__fuzzfix129)           /* a leading number is specified.  */
+     {
+       *slash = '\0';

@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-16 05:49:31.614063144 +0000
++++ /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-16 05:51:42.558528764 +0000
+@@ -293,7 +293,7 @@
+     if (!__fuzzfix2) break;
+     memcpy (r + i, r, i);
+   }
+-  int __fuzzfix3 = i < size;
++  int __fuzzfix3 =(((i>256)||((i++)<size))||(size<=0));
+   if (__fuzzfix3)
+     memcpy (r + i, r, size - i);
+ 

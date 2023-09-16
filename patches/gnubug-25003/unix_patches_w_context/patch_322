@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-16 05:49:53.369468730 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-16 05:51:51.302296188 +0000
+@@ -1470,7 +1470,7 @@
+ 
+       c = getopt_long (argc, argv, "0123456789C:a:b:del:n:t:u",
+                        longopts, NULL);
+-      int __fuzzfix130 = c == -1;
++      int __fuzzfix130 =(c==(-(1-c)));
+       if (__fuzzfix130)
+         break;
+ 

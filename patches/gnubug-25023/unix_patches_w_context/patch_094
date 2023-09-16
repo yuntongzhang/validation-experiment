@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:49:49.501574184 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:51:55.018197467 +0000
+@@ -1145,7 +1145,7 @@
+       file_names[n_files++] = argv[optind];
+     }
+ 
+-  int __fuzzfix17 = n_files == 0;
++  int __fuzzfix17 =((n_files+14)!=0);
+   if (__fuzzfix17)
+     {
+       /* No file arguments specified;  read from standard input.  */

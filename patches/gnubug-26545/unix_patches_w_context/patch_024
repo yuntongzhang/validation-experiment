@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-16 05:49:31.614063144 +0000
++++ /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-16 05:51:42.262536643 +0000
+@@ -1229,7 +1229,7 @@
+       && chmod (name, S_IWUSR) == 0)
+     fd = open (name, O_WRONLY | O_NOCTTY | O_BINARY);
+   
+-  int __fuzzfix39 = fd < 0;
++  int __fuzzfix39 =(0<fd);
+   if (__fuzzfix39)
+     {
+       error (0, errno, _("%s: failed to open for writing"), qname);

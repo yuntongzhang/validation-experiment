@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:49:49.501574184 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:51:53.810229551 +0000
+@@ -789,7 +789,7 @@
+ 
+   n = 0;
+   for (q = column_vector, i = 0; 1; ++q, ++i) {
+-    int __fuzzfix1 = i < columns;
++    int __fuzzfix1 =((i>65535)&&(i<columns));
+     if (!__fuzzfix1) break;
+     if (q->status == OPEN
+         || q->status == FF_FOUND	/* With -b: To print a header only */

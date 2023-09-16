@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:50:08.409059591 +0000
++++ /experiment/vulnloc/libtiff/bugzilla-2633/src/tools/tiff2ps.c	2023-09-16 05:50:56.283766383 +0000
+@@ -478,7 +478,7 @@
+           int __fuzzfix10 = (argc - optind > 0);
+           if (!__fuzzfix10) break;
+           TIFF *tif = TIFFOpen(filename = argv[optind], "r");
+-          int __fuzzfix16 = (tif != NULL);
++          int __fuzzfix16 =((tif<32767)&&(tif!=0));
+           if (__fuzzfix16) {
+             int __fuzzfix17 =
+                 (dirnum != -1 && !TIFFSetDirectory(tif, (tdir_t)dirnum));

@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-16 05:49:31.614063144 +0000
++++ /experiment/vulnloc/coreutils/gnubug-26545/src/src/shred.c	2023-09-16 05:51:43.546502465 +0000
+@@ -996,7 +996,7 @@
+ 
+       for (i = 0; 1; i++)
+         {
+-          int __fuzzfix30 = i < flags->n_iterations + flags->zero_fill;
++          int __fuzzfix30 =((i<((flags->n_iterations)+(flags->zero_fill)))&&(i<0));
+           if (!__fuzzfix30) break;
+           int err = 0;
+           int type = i < flags->n_iterations ? passarray[i] : 0;

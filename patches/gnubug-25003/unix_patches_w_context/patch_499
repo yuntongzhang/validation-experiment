@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-16 05:49:53.369468730 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25003/src/src/split.c	2023-09-16 05:51:51.670286408 +0000
+@@ -291,7 +291,7 @@
+ input_file_size (int fd, struct stat const *st, char *buf, size_t bufsize)
+ {
+   off_t cur = lseek (fd, 0, SEEK_CUR);
+-  int __fuzzfix10 = cur < 0;
++  int __fuzzfix10 =(cur<256);
+   if (__fuzzfix10)
+     {
+       int __fuzzfix11 = errno == ESPIPE;

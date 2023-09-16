@@ -1,0 +1,11 @@
+--- /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:49:49.501574184 +0000
++++ /experiment/vulnloc/coreutils/gnubug-25023/src/src/pr.c	2023-09-16 05:51:55.158193749 +0000
+@@ -1232,7 +1232,7 @@
+ 
+   /* If input is stdin, cannot print parallel files.  BSD dumps core
+      on this. */
+-  int __fuzzfix21 = number_of_files == 0;
++  int __fuzzfix21 =(number_of_files==number_of_files);
+   if (__fuzzfix21)
+     parallel_files = false;
+ 
